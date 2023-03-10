@@ -12,8 +12,8 @@ const animalWithName = (animal) => {
   return specie.residents.length;
 };
 
-const animals = species.reduce((acc, y) => {
-  acc[y.name] = y.residents.length;
+const animals = species.reduce((acc, cur) => {
+  acc[cur.name] = cur.residents.length;
   return acc;
 }, {});
 
