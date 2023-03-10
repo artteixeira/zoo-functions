@@ -7,7 +7,7 @@ const getRelatedEmployees = (managerId) => {
     throw new Error('O id inserido não é de uma pessoa colaboradora gerente!');
   }
   return employees.filter((element) => element.managers.includes(managerId))
-    .map((elemen) => `${elemen.firstName} ${elemen.lastName}`);
+    .map((element) => `${element.firstName} ${element.lastName}`);
 };
 
 module.exports = { isManager, getRelatedEmployees };
