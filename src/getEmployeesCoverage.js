@@ -57,5 +57,3 @@ const getEmployeesCoverage = (args) => {
 };
 
 module.exports = getEmployeesCoverage;
-
-console.log(getEmployeesCoverage());
