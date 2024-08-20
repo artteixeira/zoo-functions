@@ -1,7 +1,14 @@
-const data = require('../data/zoo_data');
+const { species } = require('../data/zoo_data');
 
-const getAnimalMap = (options) => {
-  // seu código aqui
+const getLocations = () => {
+  const loc = species.map((element) => element.location);
+  const locCorrect = loc.filter((element, index) => loc.indexOf(element) === index);
+  return locCorrect.reduce((acc, arg) => {
+    acc[arg] = [];
+    return acc;
+  }, {});
 };
+
+const getAnimalMap = (options) => {};
 
 module.exports = getAnimalMap;
